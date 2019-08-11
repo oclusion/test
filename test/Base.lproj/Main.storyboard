@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pWQ-3p-uq1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Navigation View Controller-->
+        <scene sceneID="QBv-Sz-Y0M">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationViewController" id="pWQ-3p-uq1" customClass="MainNavigationViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c5m-cT-74h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6m-ge-swC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-713" y="127"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tl3-yn-tZY">
+                                <rect key="frame" x="20" y="64" width="374" height="376"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Victory">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAa-B6-QnP">
+                                <rect key="frame" x="20" y="447.5" width="374" height="1"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tFd-r9-b7Y"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46J-OZ-1Ix">
+                                <rect key="frame" x="20" y="456" width="374" height="386"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Defeat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9U-NB-5El">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="s9U-NB-5El" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7MT-mv-O2m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="46J-OZ-1Ix" secondAttribute="trailing" constant="20" id="F3U-JL-w0h"/>
+                            <constraint firstItem="TAa-B6-QnP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ilp-ff-oq0"/>
+                            <constraint firstItem="TAa-B6-QnP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LgG-7s-IEw"/>
+                            <constraint firstItem="46J-OZ-1Ix" firstAttribute="top" secondItem="TAa-B6-QnP" secondAttribute="bottom" constant="7.5" id="RdF-cE-Oev"/>
+                            <constraint firstItem="s9U-NB-5El" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TaN-Ci-mXS"/>
+                            <constraint firstItem="TAa-B6-QnP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YY4-wB-rMz"/>
+                            <constraint firstItem="s9U-NB-5El" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bTa-yF-0Ep"/>
+                            <constraint firstItem="Tl3-yn-tZY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cGq-tD-lHn"/>
+                            <constraint firstItem="TAa-B6-QnP" firstAttribute="top" secondItem="Tl3-yn-tZY" secondAttribute="bottom" constant="7.5" id="cgz-pL-8f2"/>
+                            <constraint firstItem="Tl3-yn-tZY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fwE-Ce-Gjb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="46J-OZ-1Ix" secondAttribute="bottom" constant="20" id="jAH-CO-bCn"/>
+                            <constraint firstItem="TAa-B6-QnP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kr5-hR-TbT"/>
+                            <constraint firstItem="46J-OZ-1Ix" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="p63-Tf-RoO"/>
+                            <constraint firstAttribute="bottom" secondItem="s9U-NB-5El" secondAttribute="bottom" id="tg1-aA-h16"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tl3-yn-tZY" secondAttribute="trailing" constant="20" id="vnk-6V-K6q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="defeatUIButton" destination="46J-OZ-1Ix" id="IUh-lV-BPd"/>
+                        <outlet property="victoryUIButton" destination="Tl3-yn-tZY" id="lxZ-DC-quJ"/>
+                        <outlet property="viewWebView" destination="s9U-NB-5El" id="vzo-PG-rhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="42.028985507246382" y="126.5625"/>
         </scene>
     </scenes>
 </document>
